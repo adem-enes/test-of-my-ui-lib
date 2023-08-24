@@ -45,14 +45,14 @@ const headers: tableHeaders[] = [
     {
         name: "Registered",
         value: "registered",
-        type: (date) => new Date(date.split("T")[0])
+        cellRenderer: (date) => new Date(date.split("T")[0])
             .toLocaleString("en-EN", { year: "numeric", month: "short", day: "2-digit" })
     },
     {
         name: "Picture",
         value: "picture",
         align: "center",
-        type: (src) => <img src={src} alt={src} />
+        cellRenderer: (src) => <img src={src} alt={src} />
     },
 ];
 
