@@ -1,23 +1,30 @@
-import React from 'react'
-import { Input, CheckBox } from '../my-ui-lib/components';
+import React, { useState } from 'react'
+import { Input, CheckBox, Form } from '../my-ui-lib/components';
 
 const InputDemo = () => {
-  return (
-      <div style={{ backgroundColor: "inherit" }}>
+  const [state, setstate] = useState("");
 
-        <Input bgColor='cornflowerblue' />
-        <hr style={{ margin: "10px 0", border: "1px solid black " }} />
-        <Input />
-        <hr style={{ margin: "10px 0", border: "1px solid black " }} />
-        <hr style={{ margin: "10px 0", border: "1px solid black " }} />
+  const handleSubmit = () => {
+    console.log("hello");
+  }
+  const handleReset = () => {
+    setstate("");
+  }
+
+  return (
+    <div style={{ backgroundColor: "yellow", marginTop: "50px", width: "80%" }}>
+      <Form onSubmit={handleSubmit} onReset={handleReset}>
+        <Input bgColor='cornflowerblue' placeholder='Name' value={state} onChange={(e) => setstate(e.target.value)} />
+        <Input placeholder='Name' variant='standard' containerStyle={{ width: '50%', backgroundColor: 'red' }} />
+        <Input placeholder='Not Styled Yet' variant='filled' disabled containerStyle={{ width: '50%' }} />
         <div style={{ width: "100%" }}>
           <CheckBox bgColor='cornflowerblue' />
         </div>
-        <hr style={{ margin: "10px 0", border: "1px solid black " }} />
         <CheckBox />
 
         <div style={{ background: "var(--color)" }}>Test Div</div>
-      </div>
+      </Form>
+    </div>
   )
 }
 
