@@ -15,7 +15,10 @@ const InputDemo = () => {
     <div style={{ backgroundColor: "yellow", marginTop: "50px", width: "80%" }}>
       <Form onSubmit={handleSubmit} onReset={handleReset}>
         <Input bgColor='cornflowerblue' placeholder='Name' value={state} onChange={(e) => setstate(e.target.value)} />
-        <Input placeholder='Name' variant='standard' containerStyle={{ width: '50%', backgroundColor: 'red' }} />
+        <Input placeholder='Name' variant='standard' containerStyle={{ width: '50%' }} />
+        <Input bgColor='cornflowerblue' placeholder='Name' value={state} onChange={(e) => setstate(e.target.value)}
+          containerStyle={{ width: '50%' }} />
+        <Input placeholder='Name' variant='standard' containerStyle={{ width: '50%' }} />
         <Input placeholder='Not Styled Yet' variant='filled' disabled containerStyle={{ width: '50%' }} />
         <div style={{ width: "100%" }}>
           <CheckBox bgColor='cornflowerblue' />
