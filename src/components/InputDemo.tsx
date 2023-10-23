@@ -28,29 +28,30 @@ const InputDemo = () => {
         <div style={{ width: "50%" }}>
           <CheckBox />
         </div>
-          <CheckBox containerStyle={{width: "100%"}} />
-          <Input type='radio' placeholder='Radio' containerStyle={{ width: '50%' }} />
-          <Input type='radio' placeholder='Radio' containerStyle={{ width: '50%' }} />
-          <Input type='checkbox' placeholder='CheckBox' containerStyle={{ width: '50%' }} />
+        <CheckBox containerStyle={{ width: "100%" }} />
+        <Input type='radio' placeholder='Radio' col={6} />
+        <Input type='radio' placeholder='Radio' col={6} />
+        <Input type='checkbox' placeholder='CheckBox' col={6} />
         <div style={{ background: "var(--color)", width: '100%' }}>Test Inputs</div>
-        <Input type='button' placeholder='Button' containerStyle={{ width: '50%' }} />
-        <Input type='color' placeholder='Color' containerStyle={{ width: '50%' }}
+        <Input type='button' placeholder='Button' col={3} />
+        <Input type='color' placeholder='Color' col={3}
           value={color} onChange={(e) => setcolor(e.target.value)} />
-        <Input type='date' placeholder='Date' containerStyle={{ width: '50%' }} />
-        <Input type='datetime-local' placeholder='datetime-local' containerStyle={{ width: '50%' }} />
-        <Input type='email' placeholder='Email' containerStyle={{ width: '50%' }} />
-        <Input type='file' placeholder='File' containerStyle={{ width: '50%' }} />
-        <Input type='image' placeholder='Image' containerStyle={{ width: '50%' }} />
-        <Input type='month' placeholder='Month' containerStyle={{ width: '50%' }} />
-        <Input type='number' placeholder='Number' containerStyle={{ width: '50%' }} />
-        <Input type='password' placeholder='Password' containerStyle={{ width: '50%' }} />
-        <Input type='range' placeholder='Range' containerStyle={{ width: '50%' }}
+        <Input type='color' placeholder='Color' col={3} />
+        <Input type='date' placeholder='Date' col={3} />
+        <Input type='datetime-local' placeholder='datetime-local' col={3} />
+        <Input type='email' placeholder='Email' col={4} />
+        <Input type='file' placeholder='File' col={4} />
+        <Input type='image' placeholder='Image' col={4} />
+        <Input type='month' placeholder='Month' col={4} />
+        <Input type='number' placeholder='Number' col={4} />
+        <Input type='password' placeholder='Password' col={4} />
+        <Input type='range' placeholder='Range' col={10}
           value={range} onChange={(e) => setrange(Number(e.target.value))} />
-        <Input type='search' placeholder='Search' containerStyle={{ width: '50%' }} />
-        <Input type='tel' placeholder='Tel' containerStyle={{ width: '50%' }} />
-        <Input type='time' placeholder='Time' containerStyle={{ width: '50%' }} />
-        <Input type='url' placeholder='Url' containerStyle={{ width: '50%' }} />
-        <Input type='week' placeholder='Week' containerStyle={{ width: '50%' }} />
+        <Input type='search' placeholder='Search' col={2} />
+        <Input type='tel' placeholder='Tel' col={1} />
+        <Input type='time' placeholder='Time' col={11} />
+        <Input type='url' placeholder='Url' col={6} />
+        <Input type='week' placeholder='Week' col={6} />
 
       </Form>
     </div>

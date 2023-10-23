@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Table, tableHeaders } from "../my-ui-lib/components";
+import { Table, tableHeaders } from "../my-ui-lib/components";
 
 const headers: tableHeaders[] = [
     {
